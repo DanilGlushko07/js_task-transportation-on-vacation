@@ -4,23 +4,26 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  // write code here
-  let buy = 40 * days;
+  const dailyRate = 40;
+  const midTermDiscount = 20;
+  const longTermDiscount = 50;
+
+  let totalCost = dailyRate * days;
 
   if (days <= 2) {
-    return buy;
+    return totalCost;
   }
 
   if (days >= 3 && days <= 6) {
-    buy -= 20;
+    totalCost -= midTermDiscount;
 
-    return buy;
+    return totalCost;
   }
 
-  if (days === 7) {
-    buy -= 50;
+  if (days >= 7) {
+    totalCost -= longTermDiscount;
 
-    return buy;
+    return totalCost;
   }
 }
 
