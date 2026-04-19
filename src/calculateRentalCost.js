@@ -4,6 +4,7 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
+  // write code here
   let buy = 40 * days;
 
   if (days <= 2) {
